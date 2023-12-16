@@ -11,4 +11,5 @@ class Project extends Model
 
     protected $table = 'projects';
     protected $primaryKey = 'id';
+    protected $fillable = ["city_id", "company_id", "user_id", "name", "execution_date", "is_active"];
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('city_id')->nullable();
             $table->integer('company_id')->nullable();
             $table->integer('user_id')->nullable();
+            $table->integer('budget')->nullable();
             $table->string('name',30)->nullable();
             $table->date('execution_date')->nullable();
             $table->tinyInteger('is_active')->nullable();
