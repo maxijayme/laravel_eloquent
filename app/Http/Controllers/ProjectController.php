@@ -16,7 +16,7 @@ class ProjectController extends Controller
         //     }
         // });
 
-        $projects = Project::all();
+        $projects = Project::active()->get();
         return $projects;
     }
 
@@ -31,4 +31,11 @@ class ProjectController extends Controller
         ]);
         return 'Proyecto guardado';
     }
+
+    public function updateInactiveProject(){
+        Project::where("is_active","=", 0)
+                ->update(["name"=>"proyecto inactivo"]);
+                return "Proyectos inactivos actualizados";
+    }
+
 }

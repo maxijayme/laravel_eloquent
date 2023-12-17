@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/projects', [ProjectController::class, 'getAllProjects'])->name('projects');
 Route::get('/create-project', [ProjectController::class, 'insertProject'])->name('projects');
+Route::get('/update-inactive', [ProjectController::class, 'updateInactiveProject'])->name('projects');
